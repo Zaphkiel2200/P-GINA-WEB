@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cart-icon {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.profile-icon {
+    color: #ffd700;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.hero-image {
+    background-image: url('imagen-de-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    opacity: 0.75;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.top-products {
+    padding: 4rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.top-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-name {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f0f0f0;
+}
