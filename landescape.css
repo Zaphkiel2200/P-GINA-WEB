@@ -106,7 +106,7 @@ nav {
 .product-grid {
     display: flex;
     justify-content: space-around;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .product-card {
