@@ -14,8 +14,8 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
 }
 
 nav {
@@ -25,10 +25,19 @@ nav {
 }
 
 .logo {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
 
+.Wa {
+    height: 70%;
+    
+}
+
+.logo img {
+    max-height: 70% !important;
+    width: auto !important;
+    object-fit: contain !important;
 }
 
 .about-us {
