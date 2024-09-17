@@ -257,7 +257,7 @@ nav {
 
 .gallery h2 {
     text-align: center;
-    color: #259dff;
+    color: #ffffff;
     margin-bottom: 2rem;
 }
 
@@ -268,7 +268,7 @@ nav {
 
 .gallery-track {
     display: flex;
-    animation: scroll 40s linear infinite;
+    animation: scroll 35s linear infinite;
 }
 
 .gallery-item {
