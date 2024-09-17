@@ -29,9 +29,10 @@ nav {
     align-items: center;
 }
 
-.Wa {
-    height: 70%;
-    
+.logo img {
+    height: 100%; 
+    width: auto;
+    max-width: 150px; /
 }
 
 .logo img {
@@ -100,6 +101,8 @@ nav {
     display: flex;
     list-style-type: none;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .menu a {
@@ -116,14 +119,37 @@ nav {
 .icons {
     display: flex;
     gap: 1rem;
-    transition: transform 0.4s ease;
-    
+    size: 2rem;
 }
 
-.icons:hover {
-    transform: translateY(-7px); /* Efecto pal mouse */
+.cart-icon, .profile-icon {
+    color: #ffffff;
+    font-size: 2rem;
+    text-decoration: none;
 }
 
+.profile-icon {
+    color: #ffd700; /* Dorado */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .icons {
+        margin-top: 1rem;
+    }
+}
 .cart-icon {
     color: #ffffff;
     font-size: 1.2rem;
@@ -139,14 +165,25 @@ nav {
 .hero {
     height: 100vh;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .hero-image {
+    height: 100%;
+    width: 100%;
     background-image: url('Assets/Landscape.png');
     background-size: cover;
     background-position: center;
-    height: 100%;
+    position: relative;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35); /* Opacidad */
 }
 
 .hero-content {
@@ -156,12 +193,12 @@ nav {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
+    z-index: 1; /* contenido encima de la capap del fondo */
 }
 
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: #ffffff;
 }
 
 .hero-content p {
