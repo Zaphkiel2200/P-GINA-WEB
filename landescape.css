@@ -134,11 +134,10 @@ nav {
 }
 
 .hero-image {
-    background-image: url('');
+    background-image: url('Assets/Landscape.png');
     background-size: cover;
     background-position: center;
     height: 100%;
-    opacity: 0.75;
 }
 
 .hero-content {
@@ -151,8 +150,9 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 .hero-content p {
