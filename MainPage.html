@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="MainPage.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Assets/WA.png" alt="Logo de la tienda">
+            </div>
+            <ul class="menu">
+                <li><a href="#ropa">Ropa</a></li>
+                <li><a href="#accesorios">Accesorios</a></li>
+                <li><a href="#zapatos">Zapatos</a></li>
+                <li><a href="#maquillaje">Maquillaje</a></li>
+                <li><a href="#sale">SALE</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#carrito" class="cart-icon">🛒</a>
+                <a href="#perfil" class="profile-icon">👤</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-page">
+        <section class="search-section">
+            <h2>Explora Nuestros Productos</h2>
+            <form class="search-form">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </section>
+
+        <section class="product-list">
+            <h2>Nuestros Productos</h2>
+            <div class="product-grid">
+                                                        <!-- Repetir el bloque para cada producto -->
+                <div class="product-card">
+                    <img src="Assets/Body Burdeos.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Body Burdeos</h3>
+                        <p>Precio: $100.000</p>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Assets/Floral Vintage.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Floral Vintage</h3>
+                        <p>Precio: $85.000</p>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Assets/Corazón Rojo.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Corazón Rojo</h3>
+                        <p>Precio: $75.000</p>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Assets/2.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Corazón Rojo</h3>
+                        <p>Precio: $75.000</p>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Assets/3.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Corazón Rojo</h3>
+                        <p>Precio: $75.000</p>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <!-- Fin del bloque de producto -->
+            </div>
+        </section>
+
+        <section class="favorites">
+            <h2>Tus Favoritos</h2>
+            <div class="favorite-items">
+                                            <!-- Repite pa cada producto favorito -->
+                <div class="favorite-card">
+                    <img src="" alt="Producto Favorito">
+                    <div class="favorite-info">
+                        <h3>Nombre del Producto Favorito</h3>
+                        <p class="price">$XX.XX</p>
+                        <p class="description">Breve descripción del producto, destacando sus características principales.</p>
+                        <div class="favorite-actions">
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                            <button class="remove-favorite">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                                    <!-- Fin del bloque de producto favorito -->
+            </div>
+        </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content"></div>
+            <div class="footer-section">
+                <h3>¡Acerca de nosotros!</h3>
+                <p>Somos una tienda de moda comprometida con la calidad y el estilo.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="#ropa">Ropa</a></li>
+                    <li><a href="#accesorios">Accesorios</a></li>
+                    <li><a href="#zapatos">Zapatos</a></li>
+                    <li><a href="#maquillaje">Maquillaje</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@tutienda.com</p>
+                <p>Teléfono: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 We Are ST. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
