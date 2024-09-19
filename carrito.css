@@ -252,14 +252,14 @@ nav {
 
 .cart-summary {
     flex: 1;
-    background-color: #222;
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 8px;
     align-self: flex-start;
 }
 
 .cart-summary h2 {
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
