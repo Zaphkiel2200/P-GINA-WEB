@@ -224,7 +224,7 @@ nav {
 }
 
 .product-card:hover {
-    transform: translateY(-20px);
+    transform: translateY(-25px);
 }
                                                     /* TARJETA PRINCIPAL*/
 
@@ -285,6 +285,9 @@ nav {
     background-color: #222;
     border-radius: 8px;
     overflow: hidden;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -336,7 +339,7 @@ nav {
 
 .add-to-cart {
     padding: 0.5rem 1rem;
-    background-color: #4e82fb;
+    background-color: #63b9fa;
     color: #000;
     border: none;
     border-radius: 10px;
@@ -426,7 +429,7 @@ nav {
             font-weight: bold;
 }
 .search-more-btn {
-            background-color: #4e82fb;
+            background-color: #63b9fa;
             color: #fff;
             border: none;
             padding: 10px 20px;
