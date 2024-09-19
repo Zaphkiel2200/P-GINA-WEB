@@ -293,10 +293,9 @@ nav {
     }
 }
 
-                        /* Aquí es pausa d la animación al pasar el mouse */
-.gallery-track:hover {
-    animation-play-state: paused;
-}
+                        /* Aquí es pausa d la animación al pasar el mouse
+                                    C CAMBIÓ PARA MEJOR */
+
 
 footer {
     background-color: #111;
