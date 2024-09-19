@@ -220,12 +220,13 @@ nav {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-20px);
 }
+                                                    /* TARJETA PRINCIPAL*/
 
 .product-card img {
     width: 100%;
@@ -293,6 +294,7 @@ nav {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+
 .favorite-card img {
     width: auto;
     height: 300px;
@@ -359,7 +361,7 @@ nav {
     color: #ff725c;
 }
 
-/* Responsive design */
+                                                /* Responsive design */
 @media (max-width: 768px) {
     .favorite-card {
         flex-direction: column;
