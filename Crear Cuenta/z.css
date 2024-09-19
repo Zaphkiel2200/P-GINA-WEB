@@ -76,3 +76,128 @@ button:hover {
 .login-link:hover {
     color: #45d4f1;
 }
+
+.container2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 55px;
+    justify-items: center;
+}
+
+a {
+    color: #96af4c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0; 
+    align-content: center;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #777;
+    font-size: 20px;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #fffbfb;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+    margin-bottom: 0.5rem;
+    margin-top: 2px;
+}
+
+.facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #fffbfb;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+    margin: 0.5rem;
+}
+
+.facebook-btn:hover {
+    align-self: center;
+    background-color: #f1f1f1;
+}
+
+.facebook-btn img {
+    width: 30px;
+    height: 30px;
+    margin-right: none;
+}
+
+.google-btn:hover {
+    align-self: center;
+    background-color: #f1f1f1;
+}
+
+
+.google-btn img {
+    width: 30px;
+    height: 30px;
+    margin-right: none;
+    align-self: center;
+}
+
+.X-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #fffbfb;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    align-content: center;
+}
+
+.X-btn:hover {
+    align-self: center;
+    background-color: #f1f1f1;
+}
+
+.X-btn img {
+    width: 30px;
+    height: 30px;
+    margin-right: none;
+    border-radius: 50%;
+}
