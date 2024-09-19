@@ -225,6 +225,17 @@ body {
     cursor: pointer;
     border-radius: 4px;
 }
+
+.add-to-fav {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 .similar-products {
     margin-top: 40px;
 }
