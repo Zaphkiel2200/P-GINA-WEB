@@ -40,3 +40,29 @@ if (producto) {
     document.querySelector(".product-details").innerHTML = "<p>Producto no encontrado</p>";
 }
 
+// Función para cargar productos sugeridos
+function cargarProductosSugeridos() {
+    const suggestedGrid = document.getElementById("suggestedGrid");
+    suggestedGrid.innerHTML = ""; // Limpiar el contenedor
+
+    // Filtrar algunos productos aleatorios para sugerencias, excluyendo el actual
+    const productosSugeridos = productos
+        .filter(prod => prod.id !== productId)
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3); // Selecciona 3 productos aleatorios
+
+    productosSugeridos.forEach(prod => {
+        const suggestedCard = document.createElement("div");
+        suggestedCard.classList.add("suggested-product-card");
+        suggestedCard.innerHTML = `
+            <img src="${prod.imagen}" alt="${prod.nombre}">
+            <h4>${prod.nombre}</h4>
+            <p>$${prod.precio.toLocaleString()}</p>
+        `;
+        suggestedGrid.appendChild(suggestedCard);
+    });
+}
+
+// Cargar los productos sugeridos
+cargarProductosSugeridos();
+
