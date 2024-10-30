@@ -67,3 +67,29 @@ function cargarProductosSugeridos() {
 cargarProductosSugeridos();
 
 
+// Mostrar los detalles del producto en la página
+if (producto) {
+    document.getElementById("productName").textContent = producto.nombre;
+    document.getElementById("productImage").src = producto.imagen;
+    document.getElementById("productPrice").textContent = `Precio: $${producto.precio.toLocaleString()}`;
+    document.getElementById("productDescription").textContent = `Descripción detallada de ${producto.nombre}.`;
+
+    // Añadir evento al botón de "Comprar"
+    document.querySelector(".buy-btn").addEventListener("click", () => {
+        agregarAlCarrito(producto);
+    });
+}
+
+// Función para agregar el producto al carrito
+function agregarAlCarrito(producto) {
+    // Obtener el carrito actual de localStorage o crear uno vacío
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    // Añadir el producto al carrito
+    carrito.push(producto);
+
+    // Guardar el carrito actualizado en localStorage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    alert("Producto agregado al carrito");
+}

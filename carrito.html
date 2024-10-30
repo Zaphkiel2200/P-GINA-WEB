@@ -3,94 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras - Tienda de Moda</title>
+    <title>Carrito de Compras</title>
     <link rel="stylesheet" href="carrito.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="Assets/WA.png" alt="Logo de la tienda">
-            </div>
-            <ul class="menu">
-                <li><a href="#ropa">Ropa</a></li>
-                <li><a href="#accesorios">Accesorios</a></li>
-                <li><a href="#zapatos">Zapatos</a></li>
-                <li><a href="#sale">SALE</a></li>
-            </ul>
-            <div class="icons">
-                <a href="#carrito" class="cart-icon">🛒</a>
-                <a href="#perfil" class="profile-icon">👤</a>
-            </div>
-        </nav>    </header>
+    <h1>Tu Carrito de Compras</h1>
 
-    <main class="cart-page">
-        <h1>Tu Carrito de Compras</h1>
-        
-        <div class="cart-container">
-            <div class="cart-items">
-                                            <!-- Repite este bloque para cada artículo en el carrito -->
-                <div class="cart-item">
-                    <img src="Assets/phone case.png" alt="Producto 1">
-                    <div class="item-details">
-                        <h3>Nombre del Producto: Phone Case</h3>
-                        <p class="item-price">Precio: $25.000</p>
-                    </div>
-                    <div class="item-quantity">
-                        <button class="quantity-btn minus">-</button>
-                        <input type="number" value="1" min="1">
-                        <button class="quantity-btn plus">+</button>
-                    </div>
-                    <button class="remove-item"><i class="fas fa-trash"></i></button>
-                </div>
-                                                <!-- Fin del bloque de artículo -->
-            </div>
-            
-            <div class="cart-summary">
-                <h2>Resumen del Pedido</h2>
-                <div class="summary-item">
-                    <span>Subtotal</span>
-                    <span>$25.000</span>
-                </div>
-                <div class="summary-item">
-                    <span>Envío</span>
-                    <span>$5.000</span>
-                </div>
-                <div class="summary-item total">
-                    <span>Total</span>
-                    <span>$30.000</span>
-                </div>
-                <button class="checkout-btn">Proceder al Pago</button>
-            </div>
-        </div>
-    </main>
+    <!-- Contenedor para mostrar los productos en el carrito -->
+    <div class="cart-items">
+        <!-- Los productos se cargarán aquí mediante JavaScript -->
+    </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>¡Acerca de nosotros!</h3>
-                <p>Somos un grupo de 3 integrantes: <br>
-                    - Valeria Delgado <br>
-                    - Andrés Espinosa<br>
-                    - Daniel Felipe Rivas.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Enlaces rápidos</h3>
-                <ul>
-                    <li><a href="#ropa">Ropa</a></li>
-                    <li><a href="#accesorios">Accesorios</a></li>
-                    <li><a href="#zapatos">Zapatos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>Email: info@tutienda.com</p>
-                <p>Teléfono: (123) 456-7890</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 We Are ST. Todos los derechos reservados.</p>
-        </div>
-  </footer>
+    <!-- Contenedor para mostrar el total del carrito -->
+    <div class="cart-total">
+        <h3>Total del carrito: <span id="cartTotal">$0</span></h3>
+    </div>
+
+    <script src="carrito.js"></script>
 </body>
 </html>
