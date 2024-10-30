@@ -1,4 +1,4 @@
-// Lista de productos (cópiala aquí en `detalles.js`)
+// Lista de productos 
 const productos = [
     { id: 1, nombre: "Body Burdeos", precio: 100000, imagen: "Assets/Body Burdeos.png", categoria: "Ropa" },
     { id: 2, nombre: "Bolso de Oso", precio: 80000, imagen: "Assets/bolsooso.png", categoria: "Accesorios" },
@@ -65,4 +65,5 @@ function cargarProductosSugeridos() {
 
 // Cargar los productos sugeridos
 cargarProductosSugeridos();
+
 

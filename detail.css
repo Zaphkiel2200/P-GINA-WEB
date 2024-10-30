@@ -10,7 +10,7 @@ body {
     padding: 20px;
     text-align: center;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #222;
 }
@@ -19,7 +19,7 @@ body {
     max-width: 80%;
     max-height: 400px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 20px;
 }
 
@@ -36,7 +36,7 @@ body {
 .buy-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #46b8ff;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -44,7 +44,7 @@ body {
     font-size: 18px;
 }
 
-/* Estilo para la sección de productos sugeridos */
+
 .suggested-products {
     margin-top: 40px;
     padding: 20px;
@@ -59,9 +59,12 @@ body {
 }
 
 .suggested-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    display: flex;
+    justify-content: center; 
     gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 .suggested-product-card {
