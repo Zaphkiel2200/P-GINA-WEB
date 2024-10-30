@@ -7,44 +7,54 @@
     <link rel="stylesheet" href="x.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <h2>Perfil de Usuario</h2>
-            <div class="profile-image">
-                <img src="foto.png" alt="Foto de perfil">
-            </div>
-            <div class="profile-info">
-                <p><span class="label">Nombre:</span> USUARIO 1</p>
-                <p><span class="label">Email:</span> usua@ejemplo.com</p>
-                <p><span class="label">Ubicación:</span> Colombia</p>
-                <p><span class="label">Miembro desde:</span> Enero 2025</p>
-            </div>
-            <a href="#" class="edit-button">Editar Perfil</a>
+    <div class="perfil-contenedor">
+        <div class="perfil-header">
+          <div class="perfil-imagen">
+            <img src="foto-perfil.jpg" alt="Foto de Perfil">
+            <button class="actualizar-foto">Actualizar Foto</button>
+          </div>
+          <div class="perfil-info">
+            <h2 class="perfil-nombre">Jane Doe</h2>
+            <p class="perfil-email">jane.doe@ejemplo.com</p>
+            <p class="perfil-ubicacion">Nueva York, EE.UU.</p>
+            <p class="perfil-desde">Miembro desde: Enero 2025</p>
+            <button class="editar-perfil-btn">Editar Perfil</button>
+          </div>
         </div>
-        
-        <div class="card">
-            <h2>Estadísticas</h2>
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-value">42</div>
-                    <div class="stat-label">Compras</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">15</div>
-                    <div class="stat-label">Reseñas</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">3</div>
-                    <div class="stat-label">Listas</div>
-                </div>
-            </div>
-            <div class="profile-info">
-                <h3>Preferencias</h3>
-                <p><span class="label">Prodcuto favorito:</span> Prodcuto</p>
-                <p><span class="label">Método de pago preferido:</span> Tarjeta de crédito/débtio</p>
-                <p><span class="label">Notificaciones:</span> Activadas</p>
-            </div>
+        <div class="perfil-estadisticas">
+          <div class="stat-item">
+            <div class="stat-valor">42</div>
+            <div class="stat-etiqueta">Compras</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-valor">15</div>
+            <div class="stat-etiqueta">Reseñas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-valor">3</div>
+            <div class="stat-etiqueta">Listas</div>
+          </div>
         </div>
-    </div>
+        <div class="perfil-preferencias">
+          <h3>Preferencias</h3>
+          <div class="preferencia-item">
+            <label for="producto-favorito">Producto Favorito:</label>
+            <input type="text" id="producto-favorito" value="Camisa">
+          </div>
+          <div class="preferencia-item">
+            <label for="metodo-pago">Método de Pago:</label>
+            <select id="metodo-pago">
+              <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+              <option value="paypal">PayPal</option>
+            </select>
+          </div>
+          <div class="preferencia-item">
+            <label for="notificaciones">Notificaciones:</label>
+            <input type="checkbox" id="notificaciones" checked>
+          </div>
+          <button class="guardar-preferencias-btn">Guardar Preferencias</button>
+        </div>
+      </div>
+      <script src="x.js"></script>
 </body>
 </html>
