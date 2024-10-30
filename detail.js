@@ -20,7 +20,8 @@ const productos = [
     { id: 18, nombre: "Bufanda de Lana", precio: 45000, imagen: "Assets/bufanda.png", categoria: "Accesorios" },
     { id: 19, nombre: "Sombrero de Paja", precio: 70000, imagen: "Assets/sombrero_paja.png", categoria: "Accesorios" },
     { id: 20, nombre: "Chaleco de Mezclilla", precio: 110000, imagen: "Assets/chaleco_mezclilla.png", categoria: "Ropa" }
-];|
+];
+
 
 // Obtener el ID del producto de la URL
 const urlParams = new URLSearchParams(window.location.search);
@@ -38,3 +39,5 @@ if (producto) {
 } else {
     document.querySelector(".product-details").innerHTML = "<p>Producto no encontrado</p>";
 }
+
+
