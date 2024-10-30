@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Producto</title>
-    <link rel="stylesheet" href="MainPage.css">
+    <link rel="stylesheet" href="detail.css">
 </head>
 <body>
     <div class="product-details">
-        <h2 id="productName"></h2>
         <img id="productImage" src="" alt="Imagen del producto">
-        <p id="productPrice"></p>
-        <p id="productDescription">Descripción detallada del producto.</p>
-        <button class="buy-btn">Comprar ahora</button>
+        <div class="product-info">
+            <h2 id="productName"></h2>
+            <p id="productPrice"></p>
+            <p id="productDescription"></p>
+            <button class="buy-btn">Comprar ahora</button>
+        </div>
+    </div>
+
+                            <!-- Sección de productos sugeridos -->
+    <div class="suggested-products">
+        <h3>Productos sugeridos</h3>
+        <div class="suggested-grid" id="suggestedGrid">
+                            <!-- Aquí se cargarán productos sugeridos con Js -->
+        </div>
     </div>
 
     <script src="detail.js"></script>

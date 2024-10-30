@@ -40,4 +40,3 @@ if (producto) {
     document.querySelector(".product-details").innerHTML = "<p>Producto no encontrado</p>";
 }
 
-
