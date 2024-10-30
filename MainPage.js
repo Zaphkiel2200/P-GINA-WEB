@@ -69,3 +69,4 @@ function cargarProductos() {
 
 // Llamar a la función para cargar productos cuando la página esté lista
 document.addEventListener("DOMContentLoaded", cargarProductos);
+
