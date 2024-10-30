@@ -10,7 +10,7 @@
     <div class="perfil-contenedor">
         <div class="perfil-header">
           <div class="perfil-imagen">
-            <img src="foto-perfil.jpg" alt="Foto de Perfil">
+            <img src="foto.png" alt="Foto de Perfil">
             <button class="actualizar-foto">Actualizar Foto</button>
           </div>
           <div class="perfil-info">
@@ -22,39 +22,34 @@
           </div>
         </div>
         <div class="perfil-estadisticas">
-          <div class="stat-item">
-            <div class="stat-valor">42</div>
-            <div class="stat-etiqueta">Compras</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-valor">15</div>
-            <div class="stat-etiqueta">Reseñas</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-valor">3</div>
-            <div class="stat-etiqueta">Listas</div>
-          </div>
+          <!-- Contenido de estadísticas -->
         </div>
         <div class="perfil-preferencias">
-          <h3>Preferencias</h3>
-          <div class="preferencia-item">
-            <label for="producto-favorito">Producto Favorito:</label>
-            <input type="text" id="producto-favorito" value="Camisa">
-          </div>
-          <div class="preferencia-item">
-            <label for="metodo-pago">Método de Pago:</label>
-            <select id="metodo-pago">
-              <option value="tarjeta">Tarjeta de Crédito/Débito</option>
-              <option value="paypal">PayPal</option>
-            </select>
-          </div>
-          <div class="preferencia-item">
-            <label for="notificaciones">Notificaciones:</label>
-            <input type="checkbox" id="notificaciones" checked>
-          </div>
-          <button class="guardar-preferencias-btn">Guardar Preferencias</button>
+          <!-- Contenido de preferencias -->
         </div>
       </div>
-      <script src="x.js"></script>
+      
+      <div class="editar-perfil-modal hidden">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Editar Perfil</h2>
+          <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" value="Jane Doe">
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="jane.doe@ejemplo.com">
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" value="Nueva York, EE.UU.">
+            <button type="submit" class="guardar-perfil-btn">Guardar</button>
+          </form>
+        </div>
+      </div>
+      <div class="perfil-progreso">
+        <div class="barra-progreso" style="width: 70%;"></div>
+        <p>Perfil 70% Completo</p>
+    </div>
+    <div id="notificacion" class="notificacion hidden">Perfil actualizado con éxito!</div>    
+
+     <script src="x.js"></script>         
 </body>
 </html>
