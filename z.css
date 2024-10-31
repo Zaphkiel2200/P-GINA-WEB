@@ -1,203 +1,148 @@
-body {
-    font-family: Arial, sans-serif;
+/* Estilo general */
+* {
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #e0e0e0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #333;
 }
+
+/* Contenedor del formulario de registro */
 .container {
+    background: #fff;
+    padding: 40px;
     width: 100%;
     max-width: 400px;
-    padding: 20px;
-}
-.card {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: #fff;
+    margin-bottom: 20px;
 }
+
+.container h2 {
+    color: #4a4a4a;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
 }
+
 label {
-    margin-bottom: 5px;
-    color: #b0b0b0;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4a4a4a;
+    text-align: left;
 }
-input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    transition: background-color 0.3s ease;
-}
-input:focus {
-    outline: none;
-    background-color: #444;
-}
-button {
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-top: 5px;
     padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #6e8efb;
+    box-shadow: 0 0 8px rgba(110, 142, 251, 0.3);
+}
+
+/* Botón de Crear Cuenta */
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #6e8efb;
     border: none;
-    border-radius: 5px;
-    background-color: #55a7ff;
-    color: white;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
-button:hover {
-    background-color: #86c3f7;
+
+button[type="submit"]:hover {
+    background: #5a78e3;
 }
+
+/* Tarjeta de inicio de sesión */
 .login-card {
-    text-align: center;
+    margin-top: 20px;
+    color: #777;
 }
-.login-link {
-    color: #4c6baf;
+
+.login-card a {
+    color: #6e8efb;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-.login-link:hover {
-    color: #45d4f1;
+    font-weight: bold;
 }
 
-.container2 {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 55px;
-    justify-items: center;
-}
-
-a {
-    color: #96af4c;
-    text-decoration: none;
-}
-
-a:hover {
+.login-card a:hover {
     text-decoration: underline;
 }
 
+/* Línea divisoria para otras opciones de inicio de sesión */
 .divider {
-    display: flex;
-    align-items: center;
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 14px;
     text-align: center;
-    margin: 20px 0; 
-    align-content: center;
-}
-
-.divider::before,
-.divider::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #ccc;
 }
 
 .divider span {
+    background: #fff;
     padding: 0 10px;
-    color: #777;
-    font-size: 20px;
 }
 
-.google-btn {
+/* Contenedor y estilo de los botones de redes sociales */
+.container2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.google-btn, .facebook-btn, .X-btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 60px;
+    height: 60px;
     background-color: #fff;
-    color: #fffbfb;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    border-radius: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: center;
-    margin-bottom: 0.5rem;
-    margin-top: 2px;
-}
-
-.facebook-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    color: #fffbfb;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    border-radius: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: center;
-    margin: 0.5rem;
-}
-
-.facebook-btn:hover {
-    align-self: center;
-    background-color: #f1f1f1;
-}
-
-.facebook-btn img {
-    width: 30px;
-    height: 30px;
-    margin-right: none;
-}
-
-.google-btn:hover {
-    align-self: center;
-    background-color: #f1f1f1;
-}
-
-
-.google-btn img {
-    width: 30px;
-    height: 30px;
-    margin-right: none;
-    align-self: center;
-}
-
-.X-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    color: #fffbfb;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    border-radius: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: center;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    align-content: center;
-}
-
-.X-btn:hover {
-    align-self: center;
-    background-color: #f1f1f1;
-}
-
-.X-btn img {
-    width: 30px;
-    height: 30px;
-    margin-right: none;
+    border: 2px solid #ddd;
     border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+/* Efecto hover en los botones */
+.google-btn:hover, .facebook-btn:hover, .X-btn:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icono dentro del botón */
+.google-btn img, .facebook-btn img, .X-btn img {
+    width: 30px;
+    height: 30px;
 }
