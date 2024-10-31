@@ -36,11 +36,29 @@ if (producto) {
     document.getElementById("productImage").src = producto.imagen;
     document.getElementById("productPrice").textContent = `Precio: $${producto.precio.toLocaleString()}`;
     document.getElementById("productDescription").textContent = `Descripción detallada de ${producto.nombre}.`;
-} else {
-    document.querySelector(".product-details").innerHTML = "<p>Producto no encontrado</p>";
+
+    // Añadir evento al botón de "Comprar"
+    document.querySelector(".buy-btn").addEventListener("click", () => {
+        agregarAlCarrito(producto);
+    });
 }
 
-// Función para cargar productos sugeridos
+// Función para agregar el producto al carrito y redirigir a carrito.html
+function agregarAlCarrito(producto) {
+    // Obtener el carrito actual de localStorage o crear uno vacío
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    // Añadir el producto al carrito
+    carrito.push(producto);
+
+    // Guardar el carrito actualizado en localStorage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    // Redirigir a carrito.html
+    window.location.href = "carrito.html";
+}
+
+// Función para cargar productos sugeridos (opcional)
 function cargarProductosSugeridos() {
     const suggestedGrid = document.getElementById("suggestedGrid");
     suggestedGrid.innerHTML = ""; // Limpiar el contenedor
@@ -63,33 +81,5 @@ function cargarProductosSugeridos() {
     });
 }
 
-// Cargar los productos sugeridos
+// Llamar a cargarProductosSugeridos para mostrar recomendaciones
 cargarProductosSugeridos();
-
-
-// Mostrar los detalles del producto en la página
-if (producto) {
-    document.getElementById("productName").textContent = producto.nombre;
-    document.getElementById("productImage").src = producto.imagen;
-    document.getElementById("productPrice").textContent = `Precio: $${producto.precio.toLocaleString()}`;
-    document.getElementById("productDescription").textContent = `Descripción detallada de ${producto.nombre}.`;
-
-    // Añadir evento al botón de "Comprar"
-    document.querySelector(".buy-btn").addEventListener("click", () => {
-        agregarAlCarrito(producto);
-    });
-}
-
-// Función para agregar el producto al carrito
-function agregarAlCarrito(producto) {
-    // Obtener el carrito actual de localStorage o crear uno vacío
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    // Añadir el producto al carrito
-    carrito.push(producto);
-
-    // Guardar el carrito actualizado en localStorage
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-
-    alert("Producto agregado al carrito");
-}
