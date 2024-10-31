@@ -1,10 +1,10 @@
-// Define la categoría específica
-const categoria = "Ropa"; // Asegúrate de que coincida con la categoría que deseas mostrar
+// Detectar la categoría desde el título de la página
+const categoria = document.title; // Obtiene el título actual como "Ropa", "Accesorios", "Zapatos", "SALE"
 
 // Cargar productos desde localStorage
 const productos = JSON.parse(localStorage.getItem("productos")) || [];
 
-// Filtrar productos por la categoría
+// Filtrar productos por la categoría detectada
 const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
 
 // Seleccionar el contenedor de productos
