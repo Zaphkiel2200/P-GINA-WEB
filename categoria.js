@@ -1,16 +1,14 @@
-// Detectar la categoría desde el título de la página
 const categoria = document.title; // Obtiene el título actual como "Ropa", "Accesorios", "Zapatos", "SALE"
 
-// Cargar productos desde localStorage
 const productos = JSON.parse(localStorage.getItem("productos")) || [];
 
-// Filtrar productos por la categoría detectada
+                        // Filtrar productos por la categoría detectada
 const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
 
-// Seleccionar el contenedor de productos
+                    // Seleccionar el contenedor de productos
 const productGrid = document.querySelector(".product-grid");
 
-// Mostrar productos de la categoría específica
+                // Mostrar productos de la categoría específica
 if (productosFiltrados.length === 0) {
     productGrid.innerHTML = "<p>No hay productos en esta categoría.</p>";
 } else {
