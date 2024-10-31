@@ -1,4 +1,4 @@
-// Lista de productos con ID único
+            // Lista de productos con ID único, acomodar imagenes pa luego tenerlo en las categorias
 const productos = [
     { id: 1, nombre: "Body Burdeos", precio: 100000, imagen: "Assets/Body Burdeos.png", categoria: "Ropa" },
     { id: 2, nombre: "Bolso de Oso", precio: 80000, imagen: "Assets/bolsooso.png", categoria: "Accesorios" },
@@ -22,7 +22,7 @@ const productos = [
     { id: 20, nombre: "Chaleco de Mezclilla", precio: 110000, imagen: "Assets/chaleco_mezclilla.png", categoria: "Ropa" }
 ];
 
-// Función para cargar productos en la página según la categoría
+                        // Función para cargar productos en la página según la categoría
 function cargarProductos(categoria) {
     const productGrid = document.querySelector(".product-grid");
     productGrid.innerHTML = ""; // Limpiar el contenedor
@@ -45,25 +45,18 @@ function cargarProductos(categoria) {
     });
 }
 
-// Llamar a cargar todos los productos al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
     cargarProductos(); // Llamar sin categoría para mostrar todos
 });
 
-// Función para buscar productos
 function buscarProductos() {
-    // Obtener el valor del campo de búsqueda y convertirlo a minúsculas
     const searchQuery = document.getElementById("searchInput").value.toLowerCase();
     
-    // Seleccionar todas las tarjetas de productos ya existentes en el HTML
     const productCards = document.querySelectorAll(".product-card");
     
-    // Iterar sobre cada tarjeta de producto para aplicar el filtro
     productCards.forEach(card => {
-        // Obtener el nombre del producto dentro de la tarjeta
         const productName = card.querySelector("h3").textContent.toLowerCase();
         
-        // Mostrar la tarjeta si coincide con el término de búsqueda; de lo contrario, ocultarla
         if (productName.includes(searchQuery)) {
             card.style.display = "block";  // Muestra la tarjeta
         } else {
@@ -72,10 +65,8 @@ function buscarProductos() {
     });
 }
 
-// Escuchar el evento de entrada de texto en el campo de búsqueda para filtrar automáticamente
 document.getElementById("searchInput").addEventListener("input", buscarProductos);
 
-// Guardar productos en localStorage
 localStorage.setItem("productos", JSON.stringify(productos));
 
 
