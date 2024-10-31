@@ -75,4 +75,7 @@ function buscarProductos() {
 // Escuchar el evento de entrada de texto en el campo de búsqueda para filtrar automáticamente
 document.getElementById("searchInput").addEventListener("input", buscarProductos);
 
+// Guardar productos en localStorage
+localStorage.setItem("productos", JSON.stringify(productos));
+
 
