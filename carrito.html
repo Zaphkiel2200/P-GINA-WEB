@@ -5,19 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="carrito.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Tu Carrito de Compras</h1>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1 style="color: white;">Carrito</h1>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Contenedor para mostrar los productos en el carrito -->
-    <div class="cart-items">
-        <!-- Los productos se cargarán aquí mediante JavaScript -->
-    </div>
+    <section class="cart-page">
+        <h1>Tu Carrito de Compras</h1>
+        <div class="cart-container">
+            <!-- Contenedor para mostrar los productos en el carrito -->
+            <div class="cart-items">
+                <!-- Los productos se cargarán aquí mediante JavaScript -->
+            </div>
 
-    <!-- Contenedor para mostrar el total del carrito -->
-    <div class="cart-total">
-        <h3>Total del carrito: <span id="cartTotal">$0</span></h3>
-    </div>
+            <!-- Resumen del carrito -->
+            <div class="cart-summary">
+                <h2>Resumen</h2>
+                <div id="cartTotalContainer">
+                    <p>Total: <span id="cartTotal">$0</span></p>
+                </div>
+                <button class="checkout-btn" onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notificaciones flotantes -->
+    <div id="toast-container"></div>
+
+    <footer>
+        <p>© 2024 Carrito de Compras. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="carrito.js"></script>
 </body>

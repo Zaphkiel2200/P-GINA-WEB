@@ -1,4 +1,4 @@
-// Cargar el carrito de localStorage y mostrar los productos
+// Aquíiii es pa q el carrito de localStorage se muestren los productos
 function cargarCarrito() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const cartContainer = document.querySelector(".cart-items");
@@ -45,8 +45,10 @@ function cargarCarrito() {
 // Función para eliminar un producto del carrito
 function eliminarDelCarrito(index) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const producto = carrito[index];
     carrito.splice(index, 1);
     localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarToast(`${producto.nombre} eliminado del carrito`);
     cargarCarrito();
 }
 
@@ -58,6 +60,23 @@ function actualizarCantidad(index, cambio) {
     cantidadInput.value = nuevaCantidad;
 }
 
+// Función para mostrar notificaciones tipo toast
+function mostrarToast(mensaje) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerText = mensaje;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
+
+// Función para finalizar la compra
+function finalizarCompra() {
+    localStorage.removeItem("carrito");
+    mostrarToast("¡Gracias por tu compra!");
+    cargarCarrito();
+}
+
 // Llamar a cargarCarrito al cargar la página
 document.addEventListener("DOMContentLoaded", cargarCarrito);
-
