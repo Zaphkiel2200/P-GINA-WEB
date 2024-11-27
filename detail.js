@@ -83,3 +83,18 @@ function cargarProductosSugeridos() {
 
 // Llamar a cargarProductosSugeridos para mostrar recomendaciones
 cargarProductosSugeridos();
+
+// Añadir clase animada al cargar los detalles del producto
+document.addEventListener("DOMContentLoaded", () => {
+    const productDetails = document.querySelector(".product-details");
+    productDetails.classList.add("animated");
+
+    const suggestedCards = document.querySelectorAll(".suggested-product-card");
+    suggestedCards.forEach((card, index) => {
+        setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }, index * 150); // Aparece cada 150ms
+    });
+});
+
