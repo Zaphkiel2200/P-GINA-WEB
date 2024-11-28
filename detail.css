@@ -16,7 +16,7 @@ body {
     100% { background: linear-gradient(120deg, #333, #1a1a1a); }
 }
 
-/* Contenedor principal */
+            /* Contenedor principal */
 .product-details {
     display: flex;
     flex-direction: column;
@@ -31,7 +31,6 @@ body {
     text-align: center;
 }
 
-/* Imagen del producto */
 .product-details img {
     max-width: 100%;
     max-height: 300px;
